@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "620317837565",
+    "firebase_url": "https://securityapp-fc2d6.firebaseio.com",
+    "project_id": "securityapp-fc2d6",
+    "storage_bucket": "securityapp-fc2d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:620317837565:android:28049fcc5c5e44f4",
+        "android_client_info": {
+          "package_name": "com.theindiecorp.securityapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "620317837565-r5652lsob1lh1dq0nt48khbteo9lo0i0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.theindiecorp.securityapp",
+            "certificate_hash": "f5f78db82357231a7339e58d30ae59a57450940c"
+          }
+        },
+        {
+          "client_id": "620317837565-ltppi0c4oqkl7m23846ggrg0h7qkucau.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9fZcd-hNjetvjn737mynfKnZ-z03p6BM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "620317837565-ltppi0c4oqkl7m23846ggrg0h7qkucau.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

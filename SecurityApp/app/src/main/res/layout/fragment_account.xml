@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@android:color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,7 +22,8 @@
             android:ems="10"
             android:hint="Name"
             android:textAlignment="center"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"/>
 
         <EditText
             android:id="@+id/phone_number"
@@ -33,7 +35,8 @@
             android:hint="Phone number"
             android:inputType="phone"
             android:textAlignment="center"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray" />
 
         <EditText
             android:id="@+id/emergency_contact1"
@@ -45,7 +48,8 @@
             android:hint="Emergency Contact 1"
             android:inputType="phone"
             android:textAlignment="center"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray" />
 
         <EditText
             android:id="@+id/emergency_contact2"
@@ -57,7 +61,8 @@
             android:hint="Emergency Contact 2"
             android:inputType="phone"
             android:textAlignment="center"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"/>
 
         <EditText
             android:id="@+id/emergency_contact3"
@@ -66,10 +71,11 @@
             android:layout_marginTop="32dp"
             android:backgroundTint="@android:color/black"
             android:ems="10"
-            android:hint="EmailEmergency Contact 1"
+            android:hint="Emergency Contact 3"
             android:inputType="phone"
             android:textAlignment="center"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"/>
 
         <EditText
             android:id="@+id/otp"
@@ -82,6 +88,7 @@
             android:textAlignment="center"
             android:inputType="number"
             android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
             android:visibility="gone"/>
 
         <TextView
@@ -92,11 +99,12 @@
             android:elevation="1dp"
             android:paddingStart="24dp"
             android:paddingEnd="24dp"
-            android:text="Save"
+            android:text="Verify"
             android:textColor="@android:color/black"
             android:textStyle="bold"
             android:textSize="20sp"
-            android:visibility="gone"/>
+            android:visibility="gone"
+            android:backgroundTint="@color/colorPrimary"/>
 
         <TextView
             android:id="@+id/update"
@@ -109,7 +117,8 @@
             android:text="Save"
             android:textColor="@android:color/black"
             android:textStyle="bold"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:backgroundTint="@color/colorPrimary"/>
 
     </LinearLayout>
 

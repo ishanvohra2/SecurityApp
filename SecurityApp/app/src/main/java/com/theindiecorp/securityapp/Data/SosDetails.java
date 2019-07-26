@@ -1,9 +1,25 @@
 package com.theindiecorp.securityapp.Data;
 
 public class SosDetails {
-    String userId;
+    String userId,id;
     Double lat,lng;
     int numberOfVolunteers;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public int getNumberOfVolunteers() {
+        return numberOfVolunteers;
+    }
+
+    public void setNumberOfVolunteers(int numberOfVolunteers) {
+        this.numberOfVolunteers = numberOfVolunteers;
+    }
 
     public SosDetails(){
         numberOfVolunteers = 0;

@@ -66,6 +66,15 @@ public class AccountFragment extends Fragment {
                 phone.setText(dataSnapshot.child("phoneNo").getValue(String.class));
                 name.setText(dataSnapshot.child("name").getValue(String.class));
                 phoneTxt[0] = dataSnapshot.child("phoneNo").getValue(String.class);
+                if(dataSnapshot.child("emergency1").exists()){
+                    emergency1.setText(dataSnapshot.child("emergency1").getValue(String.class));
+                }
+                if(dataSnapshot.child("emergency2").exists()){
+                    emergency2.setText(dataSnapshot.child("emergency2").getValue(String.class));
+                }
+                if(dataSnapshot.child("emergency3").exists()){
+                    emergency3.setText(dataSnapshot.child("emergency3").getValue(String.class));
+                }
             }
 
             @Override
@@ -80,9 +89,9 @@ public class AccountFragment extends Fragment {
                 if(phone.getText().toString().equals(phoneTxt[0])){
                     databaseReference.child("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("name").setValue(name.getText().toString());
                     databaseReference.child("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("phoneNo").setValue(phone.getText().toString());
-                    databaseReference.child("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("emergency3").setValue(emergency3.getText().toString());
-                    databaseReference.child("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("emergency2").setValue(emergency2.getText().toString());
-                    databaseReference.child("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("emergency1").setValue(emergency1.getText().toString());
+                    databaseReference.child("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("emergency3").setValue("+91" + emergency3.getText().toString());
+                    databaseReference.child("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("emergency2").setValue("+91" + emergency2.getText().toString());
+                    databaseReference.child("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("emergency1").setValue("+91" + emergency1.getText().toString());
                     Toast.makeText(getContext(),"Saved",Toast.LENGTH_LONG).show();
                 }
                 else{

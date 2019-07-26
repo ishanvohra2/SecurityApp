@@ -114,6 +114,7 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
                 sosDetails.setUserId(FirebaseAuth.getInstance().getCurrentUser().getUid());
                 sosDetails.setLat(currentLocation.getLatitude());
                 sosDetails.setLng(currentLocation.getLongitude());
+                sosDetails.setNumberOfVolunteers(0);
                 databaseReference.child("sosDetails").child(id).setValue(sosDetails);
             }
         });

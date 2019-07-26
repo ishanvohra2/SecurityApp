@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.theindiecorp.securityapp.Fragments.AccountFragment;
 import com.theindiecorp.securityapp.Fragments.HomeFragment;
+import com.theindiecorp.securityapp.Fragments.NotificationFragment;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -36,6 +37,7 @@ public class HomeActivity extends AppCompatActivity {
                     loadFragment(new AccountFragment());
                     return true;
                 case R.id.notifications:
+                    loadFragment(new NotificationFragment());
                     return true;
             }
             return false;

@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "620317837565-jjqpfi76d1an5p7alce5gppdaqra7m24.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.theindiecorp.securityapp",
+            "certificate_hash": "32a7292a50905563f4ef56d1784c9dde0d08ed7b"
+          }
+        },
+        {
           "client_id": "620317837565-r5652lsob1lh1dq0nt48khbteo9lo0i0.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

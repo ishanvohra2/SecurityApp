@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -74,6 +75,7 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
             public void onClick(View view) {
                 if(sosDetails.getNumberOfVolunteers() < 3){
                     databaseReference.child("sosDetails").child(sosDetails.getId()).child("numberOfVolunteers").setValue(sosDetails.getNumberOfVolunteers() + 1);
+                    databaseReference.child("sosDetails").child(sosDetails.getId()).child("volunteers").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(true);
                     Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
                             Uri.parse("http://maps.google.com/maps?daddr=" + sosDetails.getLat() + "," +sosDetails.getLng()));
                     context.startActivity(intent);

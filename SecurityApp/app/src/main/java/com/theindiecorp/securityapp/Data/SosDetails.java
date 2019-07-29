@@ -1,9 +1,18 @@
 package com.theindiecorp.securityapp.Data;
 
 public class SosDetails {
-    String userId,id;
-    Double lat,lng;
-    int numberOfVolunteers;
+    private String userId,id;
+    private Double lat,lng;
+    private int numberOfVolunteers;
+    private boolean isSafe;
+
+    public boolean isSafe() {
+        return isSafe;
+    }
+
+    public void setSafe(boolean safe) {
+        isSafe = safe;
+    }
 
     public String getId() {
         return id;

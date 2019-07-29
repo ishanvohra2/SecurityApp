@@ -3,9 +3,11 @@ package com.theindiecorp.securityapp.Fragments;
 import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.support.annotation.NonNull;
@@ -41,6 +43,7 @@ import com.mikhaellopez.circularimageview.CircularImageView;
 import com.theindiecorp.securityapp.Data.SosDetails;
 import com.theindiecorp.securityapp.Data.UserLocation;
 import com.theindiecorp.securityapp.R;
+import com.theindiecorp.securityapp.SosActivity;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -115,9 +118,33 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
                 sosDetails.setLat(currentLocation.getLatitude());
                 sosDetails.setLng(currentLocation.getLongitude());
                 sosDetails.setNumberOfVolunteers(0);
+                sosDetails.setSafe(false);
                 databaseReference.child("sosDetails").child(id).setValue(sosDetails);
+
+                startActivity(new Intent(getContext(), SosActivity.class)
+                .putExtra("sosId",id));
             }
         });
+
+        CountDownTimer countDownTimer = new CountDownTimer(3000,1000) {
+            @Override
+            public void onTick(long l) {
+
+            }
+
+            @Override
+            public void onFinish() {
+
+                if(currentLocation!=null){
+                        UserLocation userLocation = new UserLocation();
+                        userLocation.setLat(currentLocation.getLatitude());
+                        userLocation.setLng(currentLocation.getLongitude());
+                        databaseReference.child("userLocation").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                .setValue(userLocation);
+                }
+            }
+        }.start();
+
         return view;
     }
 
@@ -178,14 +205,6 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
                 public void onComplete(@NonNull Task task) {
                     if(task.isSuccessful()){
                         currentLocation = (Location) task.getResult();
-                        if(currentLocation == null){
-                            return;
-                        }
-                        UserLocation userLocation = new UserLocation();
-                        userLocation.setLat(currentLocation.getLatitude());
-                        userLocation.setLng(currentLocation.getLongitude());
-                        databaseReference.child("userLocation").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                .setValue(userLocation);
                     }
                 }
             });

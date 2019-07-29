@@ -21,6 +21,7 @@ import com.theindiecorp.securityapp.Adapter.VolunteersListAdapter;
 import com.theindiecorp.securityapp.Data.SecurityApp;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class SosActivity extends AppCompatActivity {
 
@@ -70,7 +71,19 @@ public class SosActivity extends AppCompatActivity {
         safeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                Calendar cal = Calendar.getInstance();
+                int day = cal.get(Calendar.DAY_OF_MONTH);
+                int month = cal.get(Calendar.MONTH) + 1;
+                int year = cal.get(Calendar.YEAR);
+                int hour = cal.get(Calendar.HOUR_OF_DAY);
+                int minute = cal.get(Calendar.MINUTE);
+
+                String date = day + "/" + month + "/" + year + " | " + hour + ":" + minute ;
+
                 databaseReference.child("sosDetails").child(sosId).child("isSafe").setValue(true);
+                databaseReference.child("sosDetails").child(sosId).child("markedSafeAt").setValue(date);
+
                 startActivity(new Intent(SosActivity.this,HomeActivity.class));
                 finish();
             }

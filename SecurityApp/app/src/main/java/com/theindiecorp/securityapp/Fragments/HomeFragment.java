@@ -47,6 +47,7 @@ import com.theindiecorp.securityapp.R;
 import com.theindiecorp.securityapp.SosActivity;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Iterator;
 
 public class HomeFragment extends Fragment implements OnMapReadyCallback {
@@ -113,6 +114,15 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
         sosBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Calendar cal = Calendar.getInstance();
+                int day = cal.get(Calendar.DAY_OF_MONTH);
+                int month = cal.get(Calendar.MONTH) + 1;
+                int year = cal.get(Calendar.YEAR);
+                int hour = cal.get(Calendar.HOUR_OF_DAY);
+                int minute = cal.get(Calendar.MINUTE);
+
+                String date = day + "/" + month + "/" + year + " | " + hour + ":" + minute ;
+
                 String id = databaseReference.push().getKey();
                 SosDetails sosDetails = new SosDetails();
                 sosDetails.setUserId(FirebaseAuth.getInstance().getCurrentUser().getUid());
@@ -121,6 +131,7 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
                 sosDetails.setNumberOfVolunteers(0);
                 sosDetails.setSafe(false);
                 databaseReference.child("sosDetails").child(id).setValue(sosDetails);
+                databaseReference.child("sosDetails").child(id).child("postedAt").setValue(date);
 
                 startActivity(new Intent(getContext(), SosActivity.class)
                 .putExtra("sosId",id));
@@ -195,7 +206,7 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
         }
         map.setMyLocationEnabled(true);
         if(currentLocation !=null){
-            map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(currentLocation.getLatitude(),currentLocation.getLongitude()), 15.0f));z
+            map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(currentLocation.getLatitude(),currentLocation.getLongitude()), 15.0f));
         }
     }
 

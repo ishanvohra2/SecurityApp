@@ -55,7 +55,6 @@ public class SosActivity extends AppCompatActivity {
                 if(dataSnapshot.exists()){
                     for(DataSnapshot snapshot : dataSnapshot.getChildren()){
                         userIds.add(snapshot.getKey());
-                        sendNotification();
                     }
                     volunteersListAdapter.setUserIds(userIds);
                     volunteersListAdapter.notifyDataSetChanged();
@@ -90,16 +89,16 @@ public class SosActivity extends AppCompatActivity {
         });
     }
 
-    private void sendNotification() {
-
-        Notification notification = new NotificationCompat.Builder(this, SecurityApp.CHANNEL_2_ID)
-                .setSmallIcon(R.drawable.sos)
-                .setContentTitle("SOS")
-                .setContentText("Someone volunteered for help")
-                .setPriority(NotificationCompat.PRIORITY_HIGH)
-                .setCategory(NotificationCompat.CATEGORY_ALARM)
-                .build();
-
-        notificationManager.notify(2, notification);
-    }
+//    private void sendNotification() {
+//
+//        Notification notification = new NotificationCompat.Builder(this, SecurityApp.CHANNEL_2_ID)
+//                .setSmallIcon(R.drawable.sos)
+//                .setContentTitle("SOS")
+//                .setContentText("Someone volunteered for help")
+//                .setPriority(NotificationCompat.PRIORITY_HIGH)
+//                .setCategory(NotificationCompat.CATEGORY_ALARM)
+//                .build();
+//
+//        notificationManager.notify(2, notification);
+//    }
 }

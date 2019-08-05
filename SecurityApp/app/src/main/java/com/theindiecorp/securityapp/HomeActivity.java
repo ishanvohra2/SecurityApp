@@ -94,7 +94,7 @@ public class HomeActivity extends AppCompatActivity {
                         userLoc.setLongitude(s.getLng());
                         if(userLoc.distanceTo(HomeFragment.currentLocation) <=3000){
                             sosDetails.add(s);
-                            sendNotification();
+                            //sendNotification();
                         }
                     }
                 }

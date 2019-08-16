@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -107,6 +108,17 @@ public class AccountFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 verifySignInCode();
+            }
+        });
+
+        Button logoutBtn = view.findViewById(R.id.logoutbtn);
+        logoutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                if(FirebaseAuth.getInstance()!=null){
+                    startActivity(new Intent(getContext(),LoginActivity.class));
+                }
             }
         });
 

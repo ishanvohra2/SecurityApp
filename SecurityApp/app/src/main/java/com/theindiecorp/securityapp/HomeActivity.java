@@ -92,7 +92,7 @@ public class HomeActivity extends AppCompatActivity {
                         Location userLoc = new Location("SOS");
                         userLoc.setLatitude(s.getLat());
                         userLoc.setLongitude(s.getLng());
-                        if(userLoc.distanceTo(HomeFragment.currentLocation) <=3000){
+                        if(HomeFragment.currentLocation != null && userLoc.distanceTo(HomeFragment.currentLocation) <=3000){
                             sosDetails.add(s);
                             //sendNotification();
                         }

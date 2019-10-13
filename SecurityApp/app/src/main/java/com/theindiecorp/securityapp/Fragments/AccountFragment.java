@@ -55,7 +55,7 @@ public class AccountFragment extends Fragment {
         otp = view.findViewById(R.id.otp);
         saveBtn = view.findViewById(R.id.update);
         verifyBtn = view.findViewById(R.id.verify_otp);
-        logoutBtn = view.findViewById(R.id.logout_Btn);
+        logoutBtn = view.findViewById(R.id.logout);
         emergency1 = view.findViewById(R.id.emergency_contact1);
         emergency2 = view.findViewById(R.id.emergency_contact2);
         emergency3 = view.findViewById(R.id.emergency_contact3);
@@ -112,22 +112,11 @@ public class AccountFragment extends Fragment {
             }
         });
 
-<<<<<<< HEAD
-=======
-        Button logoutBtn = view.findViewById(R.id.logoutbtn);
->>>>>>> 2b9e8f11d540368f2770d8561ee23b934c7b5385
         logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
-<<<<<<< HEAD
-                userId = "";
                 startActivity(new Intent(getContext(),LoginActivity.class));
-=======
-                if(FirebaseAuth.getInstance()!=null){
-                    startActivity(new Intent(getContext(),LoginActivity.class));
-                }
->>>>>>> 2b9e8f11d540368f2770d8561ee23b934c7b5385
             }
         });
 

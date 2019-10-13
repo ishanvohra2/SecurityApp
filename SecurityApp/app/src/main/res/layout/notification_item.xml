@@ -5,29 +5,20 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-<<<<<<< HEAD
     android:layout_margin="8dp"
     app:cardCornerRadius="7dp">
-=======
-    android:layout_marginBottom="8dp"
-    android:background="@drawable/box">
->>>>>>> 2b9e8f11d540368f2770d8561ee23b934c7b5385
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
         android:orientation="vertical"
         android:background="@android:color/white">
-=======
-        android:paddingTop="8dp"
         android:paddingStart="8dp"
         android:paddingEnd="8dp"
         android:textSize="17sp"
         android:textStyle="bold"
         android:textColor="@android:color/black"
         android:text="NAME needs help"/>
->>>>>>> 2b9e8f11d540368f2770d8561ee23b934c7b5385
 
         <TextView
             android:id="@+id/title"
@@ -39,7 +30,6 @@
             android:textColor="@android:color/black"
             android:text="NAME needs help"/>
 
-<<<<<<< HEAD
         <TextView
             android:id="@+id/description"
             android:layout_width="match_parent"
@@ -52,6 +42,3 @@
     </LinearLayout>
 
 </android.support.v7.widget.CardView>
-=======
-</LinearLayout>
->>>>>>> 2b9e8f11d540368f2770d8561ee23b934c7b5385

@@ -30,7 +30,8 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
         </service>
-        <activity android:name=".SosActivity"></activity>
+        <activity android:name=".SosActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"

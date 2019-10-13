@@ -39,7 +39,7 @@ public class AccountFragment extends Fragment {
 
     private EditText name,phone,otp;
     private EditText emergency1,emergency2,emergency3;
-    private TextView saveBtn, verifyBtn;
+    private TextView saveBtn, verifyBtn, logoutBtn;
     private String codeSent;
 
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
@@ -54,6 +54,7 @@ public class AccountFragment extends Fragment {
         otp = view.findViewById(R.id.otp);
         saveBtn = view.findViewById(R.id.update);
         verifyBtn = view.findViewById(R.id.verify_otp);
+        logoutBtn = view.findViewById(R.id.logout_Btn);
         emergency1 = view.findViewById(R.id.emergency_contact1);
         emergency2 = view.findViewById(R.id.emergency_contact2);
         emergency3 = view.findViewById(R.id.emergency_contact3);
@@ -107,6 +108,15 @@ public class AccountFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 verifySignInCode();
+            }
+        });
+
+        logoutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                userId = "";
+                startActivity(new Intent(getContext(),LoginActivity.class));
             }
         });
 

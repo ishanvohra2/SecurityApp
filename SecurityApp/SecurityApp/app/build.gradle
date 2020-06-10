@@ -2,23 +2,14 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 
 android {
-    signingConfigs {
-        release {
-            storeFile file('D:\\AndroidStudioProjects\\SecurityApp\\spotme.jks')
-            storePassword 'password'
-            keyAlias 'alias'
-            keyPassword 'password'
-        }
-    }
-    compileSdkVersion 29
+    compileSdkVersion 28
     defaultConfig {
-        applicationId "com.bits.securityapp"
+        applicationId "com.theindiecorp.securityapp"
         minSdkVersion 22
-        targetSdkVersion 29
-        versionCode 3
-        versionName "1.2"
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        signingConfig signingConfigs.release
     }
     buildTypes {
         release {

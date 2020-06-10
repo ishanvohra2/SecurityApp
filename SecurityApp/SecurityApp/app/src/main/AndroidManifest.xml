@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.bits.securityapp">
+    package="com.theindiecorp.securityapp">
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -11,36 +11,36 @@
         android:required="true" />
 
     <application
-        android:name="com.bits.securityapp.Data.SecurityApp"
+        android:name=".Data.SecurityApp"
         android:allowBackup="true"
-        android:icon="@drawable/eye"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/eye"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <service
-            android:name="com.bits.securityapp.MyFirebaseInstanceIdService">
+            android:name=".MyFirebaseInstanceIdService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
             </intent-filter>
         </service>
         <service
-            android:name="com.bits.securityapp.MyFirebaseMessagingService">
+            android:name=".MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
         </service>
-        <activity android:name="com.bits.securityapp.SosActivity"
+        <activity android:name=".SosActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"/>
         <activity
-            android:name="com.bits.securityapp.HomeActivity"
+            android:name=".HomeActivity"
             android:label="@string/title_activity_home"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name="com.bits.securityapp.MainActivity"
+            android:name=".MainActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name="com.bits.securityapp.LoginActivity"
+            android:name=".LoginActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

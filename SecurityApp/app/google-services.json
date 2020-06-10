@@ -8,12 +8,81 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:620317837565:android:a68ee88fdbe180712e5694",
+        "android_client_info": {
+          "package_name": "com.bits.securityapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "620317837565-ltppi0c4oqkl7m23846ggrg0h7qkucau.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9fZcd-hNjetvjn737mynfKnZ-z03p6BM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "620317837565-ltppi0c4oqkl7m23846ggrg0h7qkucau.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:620317837565:android:28049fcc5c5e44f4",
         "android_client_info": {
           "package_name": "com.theindiecorp.securityapp"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "620317837565-gum07v7snocej7l1nubed3innkolup0n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.theindiecorp.securityapp",
+            "certificate_hash": "a40a0626dc83fd812b53bcfca6a4808e45da7b1e"
+          }
+        },
+        {
+          "client_id": "620317837565-hp3otqqe71fggmcggkcsphp1spms5g84.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.theindiecorp.securityapp",
+            "certificate_hash": "faed7ad1edb4ac5b09fb21444d1ded38ff58c0e2"
+          }
+        },
+        {
+          "client_id": "620317837565-9bmltbfdqvit3s6ghcu0ji58b6b6i2q1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.theindiecorp.securityapp",
+            "certificate_hash": "6e1c8cbec8cba9a9ff40ad696a9ab223afcecca3"
+          }
+        },
+        {
+          "client_id": "620317837565-7sis6ed76v3g8p4fafq4eun8su55572s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.theindiecorp.securityapp",
+            "certificate_hash": "51bb32d4f853c9fb6a2467446edbbf0af60685c1"
+          }
+        },
+        {
+          "client_id": "620317837565-64fkvf6gr6si5g4qm3oi4ujfm85qaf6h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.theindiecorp.securityapp",
+            "certificate_hash": "cd630e732b9297bbd34db14b55108373d9523ba1"
+          }
+        },
         {
           "client_id": "620317837565-vm8udjcrhhjdjfv992mfugq5fprgdbh3.apps.googleusercontent.com",
           "client_type": 1,
